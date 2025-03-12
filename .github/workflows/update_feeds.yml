@@ -13,7 +13,7 @@ jobs:
         uses: actions/checkout@v2
       - name: Fetch football data
         run: |
-          curl -o assets/js/football.json https://api.football-data.org/v4/matches \
+          curl -o assets/js/football.json https://v3.football.api-sports.io \
           -H "X-Auth-Token: ${{ secrets.FOOTBALL_API_KEY }}"
       - name: Commit and push changes
         run: |

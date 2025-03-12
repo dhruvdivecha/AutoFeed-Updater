@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     const cricketAPI = "https://api.example.com/cricket"; // Replace with actual API endpoint
-    const footballAPI = "https://api.example.com/football"; // Replace with actual API endpoint
+    const footballAPI = "https://v3.football.api-sports.io/e527606df5ab264030b3dd901fcf05c7"
 
     async function fetchData(url, elementId) {
         try {

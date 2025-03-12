@@ -14,7 +14,7 @@ jobs:
       - name: Fetch cricket data
         run: curl -o assets/js/cricket.json https://api.example.com/cricket
       - name: Fetch football data
-        run: curl -o assets/js/football.json https://api.example.com/football
+        run: curl -o assets/js/football.json https://v3.football.api-sports.io
       - name: Commit and push changes
         run: |
           git config --global user.name 'GitHub Actions'

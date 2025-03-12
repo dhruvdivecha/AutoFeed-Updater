@@ -1,10 +1,7 @@
-#!/usr/bin/env python3
-
 import requests
 import json
 import datetime
 
-# API URLs (Replace with actual API keys)
 CRICKET_API_URL = "https://api.cricapi.com/v1/matches?apikey=YOUR_API_KEY"
 FOOTBALL_API_URL = "https://v3.football.api-sports.io/e527606df5ab264030b3dd901fcf05c7"
 

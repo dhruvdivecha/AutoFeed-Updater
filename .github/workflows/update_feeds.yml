@@ -1,4 +1,4 @@
-name: Update Sports Feeds
+name: Update Football Feeds
 
 on:
   schedule:
@@ -11,14 +11,14 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v2
-      - name: Fetch cricket data
-        run: curl -o assets/js/cricket.json https://api.example.com/cricket
       - name: Fetch football data
-        run: curl -o assets/js/football.json https://v3.football.api-sports.io
+        run: |
+          curl -o assets/js/football.json https://api.football-data.org/v4/matches \
+          -H "X-Auth-Token: ${{ secrets.FOOTBALL_API_KEY }}"
       - name: Commit and push changes
         run: |
           git config --global user.name 'GitHub Actions'
           git config --global user.email 'actions@github.com'
-          git add assets/js/cricket.json assets/js/football.json
-          git commit -m 'Update sports feeds'
+          git add assets/js/football.json
+          git commit -m 'Update football feeds'
           git push

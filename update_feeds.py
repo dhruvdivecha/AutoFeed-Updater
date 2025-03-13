@@ -1,5 +1,6 @@
 from datetime import datetime
 import feedparser
+import socket  # Added for timeout handling
 
 FEEDS = [
     'https://news.ycombinator.com/rss',
@@ -20,6 +21,7 @@ HTML_TEMPLATE = """
         .timestamp {{ color: #7f8c8d; font-size: 0.9em; }}
         a {{ color: #2980b9; text-decoration: none; }}
         a:hover {{ text-decoration: underline; }}
+        .error {{ color: #e74c3c; padding: 10px; border: 1px solid #e74c3c; margin: 10px 0; }}
     </style>
 </head>
 <body>
@@ -29,14 +31,24 @@ HTML_TEMPLATE = """
 </html>
 """
 
+def parse_feed_with_timeout(url, timeout=10):
+    """Parse feed with socket-level timeout"""
+    original_timeout = socket.getdefaulttimeout()
+    socket.setdefaulttimeout(timeout)
+    try:
+        return feedparser.parse(url)
+    finally:
+        socket.setdefaulttimeout(original_timeout)
+
 def update_feeds():
     content = ""
     
     for url in FEEDS:
         try:
-            feed = feedparser.parse(url, request_timeout=10)
+            # Use our custom timeout-enabled parser
+            feed = parse_feed_with_timeout(url)
             
-            if feed.bozo:
+            if feed.bozo:  # Check for feed parsing errors
                 raise Exception(f"Feed error: {feed.bozo_exception}")
                 
             feed_content = f'<div class="feed"><h2>{feed.feed.title}</h2>'
@@ -45,7 +57,6 @@ def update_feeds():
                 time_note = ""
                 if hasattr(entry, 'published_parsed'):
                     entry_time = datetime(*entry.published_parsed[:6])
-                    time_diff = (datetime.now() - entry_time).days
                     time_note = f'<span class="timestamp">{entry_time.strftime("%Y-%m-%d %H:%M")}</span>'
                 
                 feed_content += f'''

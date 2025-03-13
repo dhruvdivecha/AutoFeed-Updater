@@ -11,17 +11,20 @@ def update_feeds():
     
     for url in FEEDS:
         try:
-            feed = feedparser.parse(url)
+            # Add timeout to prevent hanging
+            feed = feedparser.parse(url, request_timeout=10)
+            
+            if feed.bozo:  # Check for feed parsing errors
+                raise Exception(f"Feed error: {feed.bozo_exception}")
+                
             content += f"## {feed.feed.title}\n"
             
-            for entry in feed.entries[:5]:  # Always show latest 5
-                # Add timestamp if available
+            for entry in feed.entries[:5]:
+                time_note = ""
                 if hasattr(entry, 'published_parsed'):
                     entry_time = datetime(*entry.published_parsed[:6])
                     time_diff = (datetime.now() - entry_time).days
                     time_note = f" ({entry_time.strftime('%Y-%m-%d')})" if time_diff >= 1 else ""
-                else:
-                    time_note = ""
                 
                 content += f"- [{entry.title}]({entry.link}){time_note}\n"
             

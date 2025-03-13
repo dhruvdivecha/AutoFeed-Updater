@@ -1,18 +1,16 @@
-Updated at 2025-03-12T22:16:39.289513
-
-# Latest Updates
+# Feed Updates (2025-03-13 13:45)
 
 ## Hacker News
-- [Gemini Robotics brings AI into the physical world](https://deepmind.google/discover/blog/gemini-robotics-brings-ai-into-the-physical-world/)
-- [The DuckDB Local UI](https://duckdb.org/2025/03/12/duckdb-ui.html)
-- [Reverse Engineering OpenAI Code Execution to make it run C and JavaScript](https://twitter.com/benswerd/status/1899853533761200300)
-- [Shenmue (1999) Reverse Engineering Reveals Possible Sun Position Oversight](https://wulinshu.com/2025/03/11/reverse-engineering-adventures-3-bug-or-not-bug/)
-- [The Future Is Niri](https://ersei.net/en/blog/niri)
+- [Huawei targeted in new European Parliament corruption probe](https://www.ftm.eu/articles/huawei-targeted-in-european-parliament-corruption-probe)
+- [Cursor told me I should learn coding instead of asking it to generate it](https://forum.cursor.com/t/cursor-told-me-i-should-learn-coding-instead-of-asking-it-to-generate-it-limit-of-800-locs/61132)
+- [Mark Klein, AT&T whistleblower who revealed NSA mass spying, has died](https://www.eff.org/deeplinks/2025/03/memoriam-mark-klein-att-whistleblower-about-nsa-mass-spying)
+- [My teen years: The transputer operating system](https://nanochess.org/transputer_operating_system.html)
+- [Practical UX for startups surviving without a designer](https://www.tibinotes.com/p/practical-ux-for-startups-surviving)
 
 ## The GitHub Blog
-- [Why Java endures: The foundation of modern enterprise development](https://github.blog/developer-skills/why-java-endures-the-foundation-of-modern-enterprise-development/)
-- [Full exposure: A practical approach to handling sensitive data leaks](https://github.blog/security/full-exposure-a-practical-approach-to-handling-sensitive-data-leaks/)
-- [Four steps toward building an open source community](https://github.blog/open-source/maintainers/four-steps-toward-building-an-open-source-community/)
-- [Video: How to run dependency audits with GitHub Copilot](https://github.blog/developer-skills/github/video-how-to-run-dependency-audits-with-github-copilot/)
-- [Not just for developers: How product and security teams can use GitHub Copilot](https://github.blog/ai-and-ml/github-copilot/not-just-for-developers-how-product-and-security-teams-can-use-github-copilot/)
+- [Sign in as anyone: Bypassing SAML SSO authentication with parser differentials](https://github.blog/security/sign-in-as-anyone-bypassing-saml-sso-authentication-with-parser-differentials/)
+- [GitHub Availability Report: February 2025](https://github.blog/news-insights/company-news/github-availability-report-february-2025/)
+- [Why Java endures: The foundation of modern enterprise development](https://github.blog/developer-skills/why-java-endures-the-foundation-of-modern-enterprise-development/) (2025-03-11)
+- [Full exposure: A practical approach to handling sensitive data leaks](https://github.blog/security/full-exposure-a-practical-approach-to-handling-sensitive-data-leaks/) (2025-03-10)
+- [Four steps toward building an open source community](https://github.blog/open-source/maintainers/four-steps-toward-building-an-open-source-community/) (2025-03-06)
 

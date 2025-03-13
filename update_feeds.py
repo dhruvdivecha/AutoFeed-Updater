@@ -5,7 +5,7 @@ import socket
 FEEDS = [
     'https://news.ycombinator.com/rss',
     'https://github.blog/feed/',
-    'https://www.cricbuzz.com/rss/cricket.xml',         # Cricket News
+    'https://www.cricbuzz.com/cricket-news/feed',         # Cricket News
     'https://www.espncricinfo.com/rss/content/story/feeds/6.xml'  # ESPN Cricinfo
 ]
 

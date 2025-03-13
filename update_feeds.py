@@ -119,7 +119,7 @@ def update_feeds():
             content += f'<div class="error">⚠️ Error fetching {url}: {str(e)}</div>'
     
     full_html = HTML_TEMPLATE.format(
-        timestamp=datetime.now().strftime("%Y-%m-%d %H:%M"),
+        timestamp=datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC"),
         content=content
     )
     

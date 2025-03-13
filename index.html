@@ -5,19 +5,63 @@
     <title>Feed Updates</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        body { max-width: 800px; margin: 20px auto; padding: 0 20px; font-family: system-ui; }
-        h1 { color: #2c3e50; }
-        .feed { margin-bottom: 30px; }
-        .entry { margin: 10px 0; }
-        .timestamp { color: #7f8c8d; font-size: 0.9em; }
-        a { color: #2980b9; text-decoration: none; }
-        a:hover { text-decoration: underline; }
-        .error { color: #e74c3c; padding: 10px; border: 1px solid #e74c3c; margin: 10px 0; }
+        body {
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+            font-family: system-ui;
+            background-color: #000000;
+            color: #ffffff;
+        }
+        .container {
+            background-color: #1a1a1a;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }
+        h1 { color: #4CAF50; }
+        .feed {
+            margin-bottom: 30px;
+            border-left: 3px solid #4CAF50;
+            padding-left: 15px;
+        }
+        .entry {
+            margin: 15px 0;
+            padding: 12px;
+            background-color: #262626;
+            border-radius: 5px;
+            transition: transform 0.2s;
+        }
+        .entry:hover {
+            transform: translateX(5px);
+        }
+        .timestamp {
+            color: #888;
+            font-size: 0.85em;
+            display: block;
+            margin-top: 5px;
+        }
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        a:hover {
+            color: #45a049;
+            text-decoration: underline;
+        }
+        .error {
+            color: #ff4444;
+            background-color: #330000;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }
     </style>
 </head>
 <body>
-    <h1>📰 Feed Updates (2025-03-13 14:18)</h1>
-    <div class="feed"><h2>Hacker News</h2>
+    <h1>📰 Sports Feed Updates (2025-03-13 14:34)</h1>
+    <div class="container">
+        <div class="feed"><h2>Hacker News</h2>
                 <div class="entry">
                     <a href="https://www.ftm.eu/articles/huawei-targeted-in-european-parliament-corruption-probe" target="_blank">Huawei targeted in new European Parliament corruption probe</a>
                     <span class="timestamp">2025-03-13 10:04</span>
@@ -39,8 +83,8 @@
                 </div>
                 
                 <div class="entry">
-                    <a href="https://nanochess.org/transputer_operating_system.html" target="_blank">My teen years: The transputer operating system</a>
-                    <span class="timestamp">2025-03-13 00:31</span>
+                    <a href="https://www.copetti.org/writings/consoles/game-boy-advance/" target="_blank">Game Boy Advance Architecture – A Practical Analysis</a>
+                    <span class="timestamp">2025-03-13 08:25</span>
                 </div>
                 </div><div class="feed"><h2>The GitHub Blog</h2>
                 <div class="entry">
@@ -67,6 +111,32 @@
                     <a href="https://github.blog/open-source/maintainers/four-steps-toward-building-an-open-source-community/" target="_blank">Four steps toward building an open source community</a>
                     <span class="timestamp">2025-03-06 17:00</span>
                 </div>
+                </div><div class="error">⚠️ Error fetching https://www.cricbuzz.com/rss/cricket.xml: Feed error: <unknown>:2:26: not well-formed (invalid token)</div><div class="feed"><h2>India news from ESPN Cricinfo.com</h2>
+                <div class="entry">
+                    <a href="https://www.espncricinfo.com/ci/content/story/1476806.html?ex_cid=OTC-RSS" target="_blank">Abid Ali, former India Test bowler and fielder ahead of his time, dies aged 83</a>
+                    <span class="timestamp">2025-03-13 05:43</span>
                 </div>
+                
+                <div class="entry">
+                    <a href="https://www.espncricinfo.com/ci/content/story/1476825.html?ex_cid=OTC-RSS" target="_blank">Why KKR made Ajinkya Rahane, and not Venkatesh Iyer, their captain</a>
+                    <span class="timestamp">2025-03-13 05:21</span>
+                </div>
+                
+                <div class="entry">
+                    <a href="https://www.espncricinfo.com/ci/content/story/1476786.html?ex_cid=OTC-RSS" target="_blank">Gill, Rohit and Kohli in top five of ICC's ODI batting rankings</a>
+                    <span class="timestamp">2025-03-13 03:10</span>
+                </div>
+                
+                <div class="entry">
+                    <a href="https://www.espncricinfo.com/ci/content/story/1476741.html?ex_cid=OTC-RSS" target="_blank">Bond on Bumrah: 'I wouldn't want to be playing him in more than two Tests in a row'</a>
+                    <span class="timestamp">2025-03-12 08:58</span>
+                </div>
+                
+                <div class="entry">
+                    <a href="https://www.espncricinfo.com/ci/content/story/1476648.html?ex_cid=OTC-RSS" target="_blank">No PCB official at Champions Trophy final presentation, host board asks ICC to explain</a>
+                    <span class="timestamp">2025-03-10 14:51</span>
+                </div>
+                </div>
+    </div>
 </body>
 </html>

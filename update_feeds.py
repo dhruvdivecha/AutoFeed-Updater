@@ -1,10 +1,12 @@
 from datetime import datetime
 import feedparser
-import socket  # Added for timeout handling
+import socket
 
 FEEDS = [
     'https://news.ycombinator.com/rss',
-    'https://github.blog/feed/'
+    'https://github.blog/feed/',
+    'https://www.cricbuzz.com/rss/cricket.xml',         # Cricket News
+    'https://www.espncricinfo.com/rss/content/story/feeds/6.xml'  # ESPN Cricinfo
 ]
 
 HTML_TEMPLATE = """
@@ -14,22 +16,68 @@ HTML_TEMPLATE = """
     <title>Feed Updates</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-        body {{ max-width: 800px; margin: 20px auto; padding: 0 20px; font-family: system-ui; }}
-        h1 {{ color: #2c3e50; }}
-        .feed {{ margin-bottom: 30px; }}
-        .entry {{ margin: 10px 0; }}
-        .timestamp {{ color: #7f8c8d; font-size: 0.9em; }}
-        a {{ color: #2980b9; text-decoration: none; }}
-        a:hover {{ text-decoration: underline; }}
-        .error {{ color: #e74c3c; padding: 10px; border: 1px solid #e74c3c; margin: 10px 0; }}
+        body {{
+            max-width: 800px;
+            margin: 20px auto;
+            padding: 0 20px;
+            font-family: system-ui;
+            background-color: #000000;
+            color: #ffffff;
+        }}
+        .container {{
+            background-color: #1a1a1a;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 20px 0;
+        }}
+        h1 {{ color: #4CAF50; }}
+        .feed {{
+            margin-bottom: 30px;
+            border-left: 3px solid #4CAF50;
+            padding-left: 15px;
+        }}
+        .entry {{
+            margin: 15px 0;
+            padding: 12px;
+            background-color: #262626;
+            border-radius: 5px;
+            transition: transform 0.2s;
+        }}
+        .entry:hover {{
+            transform: translateX(5px);
+        }}
+        .timestamp {{
+            color: #888;
+            font-size: 0.85em;
+            display: block;
+            margin-top: 5px;
+        }}
+        a {{
+            color: #4CAF50;
+            text-decoration: none;
+        }}
+        a:hover {{
+            color: #45a049;
+            text-decoration: underline;
+        }}
+        .error {{
+            color: #ff4444;
+            background-color: #330000;
+            padding: 15px;
+            border-radius: 5px;
+            margin: 15px 0;
+        }}
     </style>
 </head>
 <body>
-    <h1>📰 Feed Updates ({timestamp})</h1>
-    {content}
+    <h1>📰 Sports Feed Updates ({timestamp})</h1>
+    <div class="container">
+        {content}
+    </div>
 </body>
 </html>
 """
+
 
 def parse_feed_with_timeout(url, timeout=10):
     """Parse feed with socket-level timeout"""

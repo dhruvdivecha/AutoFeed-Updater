@@ -15,7 +15,7 @@ A Python script that aggregates RSS feeds from various sources (Hacker News, Git
 
 1. Clone the repository:
 ```bash
-git clone https://github.com/YOUR_USERNAME/Auto-Feed-Updater.git
+git clone https://github.com/dhruvdivecha/Auto-Feed-Updater.git
 cd Auto-Feed-Updater
 ```
 
